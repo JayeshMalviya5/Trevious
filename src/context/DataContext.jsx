@@ -12,7 +12,7 @@ const DataContextProvider = ({ children }) => {
     )
       .then((response) => response.json())
       .then((data) => {
-        data.articles.forEach((item) => {
+        data?.articles?.forEach((item) => {
           item.id = uuid();
         });
         setData(data.articles)
